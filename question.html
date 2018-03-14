@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Harriet前端</title>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-migrate-1.2.1.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.js"></script>
+    <script type="text/javascript" src="js/jquery.form.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="uEditor/uEditor.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/question.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="img/shy-minion-icon.png">
+    <link rel="stylesheet" href="css/smoothness/jquery.ui.css" type="text/css">
+    <link rel="stylesheet" href="uEditor/uEditor.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    <header>
+        <div class="header_main">
+            <h1>Harriet</h1>
+            <div class="header_search">
+                <input type="text"  name="search" class="search">
+            </div>
+            <div class="header_button">
+                <button class="btn">查询</button>
+                <button class="question_btn">提问</button>
+            </div>
+            <div class="header_member">
+                <a href="javascript:void(0)" id="reg_a">注册</a>
+                <a href="javascript:void(0)" id="member">用户</a> |
+                <a href="javascript:void(0)" id="login_a">登录</a>
+                <a href="javascript:void(0)" id="logout">退出</a>
+            </div>
+        </div>
+    </header>
+
+    <div id="main">
+        <div class="main_left">
+            <div class="main_left_header">
+                <h1>《西游记》中有哪些可悲的细节？</h1>
+                <div class="answer">
+                    <input type="button" class="focus_question" value="关注问题">
+                    <input type="button" class="write_answer" value="写回答">
+                    <span>邀请回答</span><span>分享</span>
+                </div>
+            </div>
+
+            <div class="main_left_content">
+                <h5>油条 发表于 2018-03-12</h5>
+                “欲待回花果山水帘洞，恐本洞小妖见笑，笑我出尔反尔不是个大丈夫之器; 欲要投奔天宫，又恐天宫内不容久住; 欲要投海岛，却又羞见那三岛诸仙; 欲要奔龙宫，又不伏气求告龙王。” 于是,只好回去找唐僧了，低头认错：“师父，恕弟子这遭！向后再不敢行凶，一一受师父教诲。千万还得我保你西天去也。”然而唐僧一点没心慈手软，念了二十余遍的紧箍咒,还骂道: “你这猢孙，杀生害命，连累了我多少，如今实不要你了! 我去得去不得不干你事! 快走! 快走! 迟些儿，我又念真言，这番绝不住口，把你脑浆都勒出来呢! ”被伤了心的悟空,想到去观音面前告状,让观音为他做主。“行者望见菩萨,倒身下拜,止不住泪如泉涌,放声大哭。”多心高气傲的齐天大圣啊，竟然哭了，可见真真是被伤透了心。4.在57回中出现了一只六耳猕猴，“此猴若立一处，能知千里外之事，凡人说话，亦能知之，故此善聆音，能察理，知前后，万物皆明。与真悟空同象同音者，六耳猕猴也。” 这六耳猕猴几乎和悟空一般了。
+            </div>
+            <!-- <div class="main_left_bottom">0条评论 <span >感谢</span><span >收藏</span></div> -->
+        </div>
+
+        <div class="main_right">
+            <div id="accordion">
+                <h3>关注</h3>
+                <div><p>我关注的人</p><p>关注我的人</p><p>我关注的问题</p></div>
+                <h3>我的收藏</h3>
+                <div><p>收藏的问题</p><p>收藏的话题</p></div>
+                <h3>社区服务中心</h3>
+                <div><p>我的邀请</p></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 登录认证模块 -->
+
+    <form id="reg" " title="会员注册">
+        <ol class="reg_error"></ol>
+         <p>
+            <label for="user">帐号：</label><input type="text" name="user" class="text" id="user" title="请输入帐号，不小于2位！"/><span class="star">*</span>
+        </p>
+        <p>
+            <label for="password">密码：</label><input type="password" name="password" class="text" id="password" title="请输入密码，不少于6位"/><span class="star">*</span>
+        </p>
+        <p>
+            <label for="email">邮箱：</label><input type="text" name="email" class="text" id="email" title="请输入邮箱"/><span class="star">*</span>
+        </p>
+        <p>
+            <label>性别：</label><input type="radio" name="sex" value="male" id="male" checked="checked"><label for="male">男</label></input><input type="radio" name="sex" value="male" id="female"><label for="female">女</label></input>
+        </p>
+        <p>
+            <label for="birthday">生日：</label><input type="text" name="birthday" class="text" id="birthday" title="请输入生日"/>
+        </p>
+    </form>
+
+    <div id="loading">数据交互中</div>
+    <div id="error">请登录后操作</div>
+
+    <div id="footer">ljh | jQuery_Ui学习</div>
+
+    <form id="login" title="会员登录">
+        <ol class="login_error"></ol>
+        <p>
+            <label for="login_user">帐号：</label><input type="text" name="login_user" class="text" id="login_user" title="请输入帐号，不小于2位！"/><span class="star">*</span>
+        </p>
+        <p>
+            <label for="login_password">密码：</label><input type="password" name="login_password" class="text" id="login_password" title="请输入密码，不少于6位"/><span class="star">*</span>
+        </p>
+        <p>
+            <input type="checkbox" name="expires" id="expires" checked="checked" /><label for="expires">登录后有效期一周</label>
+        </p>
+    </form>
+
+    <form id="question" title="提问">
+        <p>
+            <label for="title">问题名称：</label>
+            <input style="width:390px;" type="text" name="title" class="text" id="title" />
+        </p>
+        <p>
+            <textarea name="content" class="uEditorCustom" id="content" cols="30" rows="10">请输入问题描述！</textarea>
+        </p>
+    </form>
+
+</body>
+</html>

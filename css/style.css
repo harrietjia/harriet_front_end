@@ -1,0 +1,354 @@
+﻿body {
+	margin: 0;
+	margin:40px 0 0 0;
+	padding:0;
+	font-size:12px;
+	font-family:宋体;
+	background:#fff;
+}
+/*更改jquery UI主题的对话框的背景*/
+.ui-widget-header{
+	background: url('../img/ui_header_bg.png');
+}
+/*修改tooltip的样式*/
+.ui-tooltip{
+	color: #666;
+}
+/*邮箱自动补全的悬停背景色*/
+.ui-menu-item a.ui-state-focus{
+	background: url('../img/ui_header_bg.png');
+}
+.ui-menu-item a{
+	color: #666;
+}
+/*修改当天日期的样式*/
+.ui-datepicker-today .ui-state-highlight{
+	color: orange;
+	border: solid 1px #eee;
+}
+/*修改选定日期的样式*/
+.ui-datepicker-current-day .ui-state-active{
+	color:#06f;
+	border: solid 1px #eee;
+}
+header{
+	width: 100%;
+	height: 40px;
+	background: url('../img/header_bg.png');
+	position: absolute;
+	top: 0;
+}
+header .header_main{
+	width: 800px;
+	height: 40px;
+	margin: 0 auto;
+}
+header .header_main h1{
+	font-family: 'Tahoma Arial';
+	font-size: 20px;
+	float: left;
+	margin: 0;
+	padding: 0;
+	color: #666;
+	line-height: 40px;
+	padding: 0 10px;
+	height: 40px;
+	cursor: pointer;
+}
+header .header_search{
+	padding: 5px 0 0 0;
+	float: left;
+
+}
+header .header_search .search{
+	width: 300px;
+	height: 24px;
+	border: 1px solid #ccc;
+	border-radius : 5px;
+	background: white;
+	color: #666;
+	font-size: 14px;
+	text-indent: 5px;
+}
+
+header .header_button{
+	float: left;
+	padding: 5px;
+}
+
+header .header_member{
+	font-size: 14px;
+	color: #555;
+	float: right;
+	line-height: 40px;
+	height: 40px;
+}
+header .header_member a{
+	text-decoration: none;
+	color: #555;
+	font-size: 14px;
+}
+#reg,#login,#question{
+	padding: 15px 0 0 15px;
+}
+#reg p,#login p,#question p{
+	margin:10px 0;
+	padding: 0;
+}
+#reg p label,#login p label,#question p label{
+	font-size: 14px;
+	color: #666;
+}
+#reg .star,#login .star,#question .star{
+	font-size: 14px;
+	color: maroon;
+}
+#reg .success,#login .success,#question .success{
+	display: inline-block;
+	width: 20px;
+	background : url('../img/reg_succ.png') no-repeat;
+}
+#reg ol,#login ol,#question ol{
+	margin: 0;
+	padding: 0 0 0 20px;
+	color: maroon;
+}
+#reg ol li,#login ol li,#question ol li{
+	height: 20px;
+}
+#reg .text,#login .text,#question .text{
+	border-radius: 4px;
+	border: solid 1px #ccc;
+	width: 200px;
+	height:25px;
+	text-indent: 5px;
+	background: #fff;
+	color: #666;
+}
+#loading {
+	background : url('../img/loading.gif') no-repeat 20px center;
+	line-height: 28px;
+	font-size : 14px;
+	font-weight: bold;
+	text-indent: 40px;
+	color: #666;
+}
+#error {
+	background : url('../img/error.png') no-repeat 20px center;
+	line-height: 28px;
+	font-size : 14px;
+	font-weight: bold;
+	text-indent: 40px;
+	color: #666;
+}
+#expires{
+	margin : 5px 2px 0 125px;
+}
+#main{
+	width: 800px;
+	margin : 0 auto;
+	padding: 10px 0 0 0; /*上右下左*/
+}
+#main .main_left{
+	width: 580px;
+	float: left;
+}
+#main .main_right{
+	width: 200px;
+	float: right;
+}
+#tabs{
+	border : none;
+}
+#ui-tabs-1,#ui-tabs-2,#ui-tabs-3{
+	border:1px solid #aaa;
+	border-top:none;
+	position:relative;
+	top:-2px;
+	/* height: 100px;
+	padding : 10px; */
+}
+#accordion{
+}
+.content h4{
+	color : #666;
+	font-weight: normal;
+}
+.content h3{
+	color : #369;
+}
+.content .editor {
+color:#333;
+line-height:180%;
+/* height:110px; */
+/* overflow:hidden; */
+}
+.content .bottom {
+padding:5px 0 0 0;
+}
+.content hr {
+color:#ccc;
+height:1px;
+}
+.content .comment{
+	color : #369;
+	cursor : pointer;
+}
+.content .comment_list{
+	border : 1px solid #ccc;
+	border-radius: 5px;
+	padding: 5px 10px;
+	display: none;
+}
+.content .comment_list dl{
+	margin : 0;
+	padding : 3px 0px 5px 0;
+}
+.content .comment_list dl dt{
+	margin : 0;
+	padding : 5px 0 0 0;
+	color : #369;
+}
+.content .comment_list dl dd{
+	margin : 0;
+	padding : 0;
+	color : #333;
+	line-height: 180%;
+}
+.content .comment_list dl dd.date{
+	color : #666;
+}
+.content .comment_list dl.comment_content{
+	border-bottom: 1px solid #ccc;
+}
+.content .comment_add{
+	text-align: right;
+}
+.content .comment_add input{
+	cursor : pointer;
+}
+.content .comment_load dd{
+	background: url('../img/comment_load.gif') no-repeat 75px 45%;
+}
+.content .comment_add textarea{
+	width : 98%;
+	border : 1px solid #ccc;
+	border-radius: 5px;
+	background: #fff;
+	padding : 5px;
+	font-size: 12px;
+	color : #666;
+	resize : none;
+	margin : 0 0 5px 0;
+}
+.content .load_more {
+	width:100%;
+	margin:10px 0 0 0;
+	height:30px;
+	line-height:30px;
+}
+.content .load_more img {
+	padding:5px 0 0 0;
+}
+.content .up {
+float:right;
+color:#369;
+cursor:pointer;
+}
+.content .down {
+/* float:right; */
+color:#369;
+cursor:pointer;
+}
+
+/*question*/
+.answer span,.main_left_bottom span{
+	color : #666;
+	font-size: 14px;
+	margin: 0 0 0 20px;
+	cursor: pointer;
+}
+.main_left_header h1{
+	color: #666;
+}
+.main_left_content{
+	color: #333;
+	font-size: 16px;
+	margin: 50px 0 0 0 ;
+}
+.main_left_content h5{
+	color: #369;
+}
+#ques_comment{
+	margin: 0;
+	color : #369;
+	font-size: 14px;
+}
+.main_left_bottom{
+	margin: 0 0 0 20px;
+	margin: 20px 0 0 0;
+}
+.main_left_content .comment_list{
+	border : 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 12px;
+	padding: 5px 10px;
+	display: none;
+}
+.main_left_content .comment_list dl{
+	margin : 0;
+	padding : 3px 0px 5px 0;
+}
+.main_left_content .comment_list dl dt{
+	margin : 0;
+	padding : 5px 0 0 0;
+	color : #369;
+}
+.main_left_content .comment_list dl dd{
+	margin : 0;
+	padding : 0;
+	color : #333;
+	line-height: 180%;
+}
+.main_left_content .comment_list dl dd.date{
+	color : #666;
+}
+.main_left_content .comment_list dl.comment_content{
+	border-bottom: 1px solid #ccc;
+}
+.main_left_content .comment_add{
+	text-align: right;
+}
+.main_left_content .comment_add input{
+	cursor : pointer;
+}
+.main_left_content .comment_load dd{
+	background: url('../img/comment_load.gif') no-repeat 75px 45%;
+}
+.main_left_content .comment_add textarea{
+	width : 98%;
+	border : 1px solid #ccc;
+	border-radius: 5px;
+	background: #fff;
+	padding : 5px;
+	font-size: 12px;
+	color : #666;
+	resize : none;
+	margin : 0 0 5px 0;
+}
+.main_left_content .load_more {
+	width:100%;
+	margin:10px 0 0 0;
+	height:30px;
+	line-height:30px;
+}
+.main_left_content .load_more img {
+	padding:5px 0 0 0;
+}
+
+#footer{
+	clear: both;
+	padding : 10px;
+	text-align: center;
+	color : #666;
+}

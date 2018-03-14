@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><script>window.location.href="/jquery/error/"</script><![endif]-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Harriet前端</title>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-migrate-1.2.1.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.js"></script>
+    <script type="text/javascript" src="js/jquery.form.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="uEditor/uEditor.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="img/shy-minion-icon.png">
+    <link rel="stylesheet" href="css/smoothness/jquery.ui.css" type="text/css">
+    <link rel="stylesheet" href="uEditor/uEditor.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    <header>
+        <div class="header_main">
+            <h1>Harriet</h1>
+            <div class="header_search">
+                <input type="text"  name="search" class="search">
+            </div>
+            <div class="header_button">
+                <button class="btn">查询</button>
+                <button class="question_btn">提问</button>
+            </div>
+            <div class="header_member">
+                <a href="javascript:void(0)" id="reg_a">注册</a>
+                <a href="javascript:void(0)" id="member">用户</a> |
+                <a href="javascript:void(0)" id="login_a">登录</a>
+                <a href="javascript:void(0)" id="logout">退出</a>
+            </div>
+        </div>
+    </header>
+
+    <div id="main">
+        <div class="main_left">
+            <div id="tabs">
+                <ul>
+                    <li><a href="tab1.html">最热门的提问</a></li>
+                    <li><a href="tab2.html">小编推荐的提问</a></li>
+                    <li><a href="tab3.html">评论最多的提问</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <!-- <h4>ljh 发表于 2018-03-12</h4>
+                <h3>例子例子例子例子</h3>
+                <div class="editor">
+                    123566
+                </div>
+                <div class="bottom">0条评论 <span class="down">显示全部</span><span class="up">收起</span></div>
+                <hr noshade="noshade" size="1" /> -->
+            </div>
+        </div>
+        <div class="main_right">
+            <div id="accordion">
+                <h3>关注</h3>
+                <div><p>我关注的人</p><p>关注我的人</p><p>我关注的问题</p></div>
+                <h3>我的收藏</h3>
+                <div><p>收藏的问题</p><p>收藏的话题</p></div>
+                <h3>社区服务中心</h3>
+                <div><p>我的邀请</p></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <button id="btn1">更新内容</button> -->
+
+
+
+    <form id="reg"  title="会员注册">
+        <ol class="reg_error"></ol>
+        <!--
+        复选
+        <input type="checkbox" name="color" value="red" id="red"><label for="red">红</label></input>
+        <input type="checkbox" name="color" value="blue" id="blue"><label for="blue">蓝</label></input>
+        <input type="checkbox" name="color" value="green" id="green"><label for="green">绿</label></input>
+        <input type="checkbox" name="color" value="yellow" id="yellow"><label for="yellow">黄</label></input>
+        -->
+         <p>
+            <label for="user">帐号：</label><input type="text" name="user" class="text" id="user" title="请输入帐号，不小于2位！"/><span class="star">*</span>
+        </p>
+        <p>
+            <label for="password">密码：</label><input type="password" name="password" class="text" id="password" title="请输入密码，不少于6位"/><span class="star">*</span>
+        </p>
+        <p>
+            <label for="email">邮箱：</label><input type="text" name="email" class="text" id="email" title="请输入邮箱"/><span class="star">*</span>
+        </p>
+        <p>
+            <label>性别：</label><input type="radio" name="sex" value="male" id="male" checked="checked"><label for="male">男</label></input><input type="radio" name="sex" value="male" id="female"><label for="female">女</label></input>
+        </p>
+        <p>
+            <label for="birthday">生日：</label><input type="text" name="birthday" class="text" id="birthday" title="请输入生日"/>
+        </p>
+    </form>
+
+    <div id="loading">数据交互中</div>
+    <div id="error">请登录后操作</div>
+
+    <div id="footer">ljh | jQuery_Ui学习</div>
+
+    <form id="login" title="会员登录">
+        <ol class="login_error"></ol>
+        <p>
+            <label for="login_user">帐号：</label><input type="text" name="login_user" class="text" id="login_user" title="请输入帐号，不小于2位！"/><span class="star">*</span>
+        </p>
+        <p>
+            <label for="login_password">密码：</label><input type="password" name="login_password" class="text" id="login_password" title="请输入密码，不少于6位"/><span class="star">*</span>
+        </p>
+        <p>
+            <input type="checkbox" name="expires" id="expires" checked="checked" /><label for="expires">登录后有效期一周</label>
+        </p>
+    </form>
+
+    <form id="question" title="提问">
+        <p>
+            <label for="title">问题名称：</label>
+            <input style="width:390px;" type="text" name="title" class="text" id="title" />
+        </p>
+        <p>
+            <textarea name="content" class="uEditorCustom" id="content" cols="30" rows="10">请输入问题描述！</textarea>
+        </p>
+    </form>
+</body>
+</html>
