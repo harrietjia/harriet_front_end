@@ -5,4 +5,4 @@
 搜索的自动补全功能，返回的是由ajax取出数据库中数据:
 从用户输入的第一的字符开始传给php文件，然后再从数据库中选取符合的问题返回到页面</p>
 
-<img src="/img/" alt="页面整体效果图"/>
+<img src="https://github.com/harrietjia/harriet_front_end/blob/master/img/20180314174126149.png" alt="页面整体效果图"/>
